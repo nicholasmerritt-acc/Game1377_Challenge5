@@ -105,9 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629360cc36e724222b73cadfd418f267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 15
-  explosionFx: {fileID: 8328426341284958323, guid: 066dd222b602e49afbe0f2b9c3c96ddb, type: 3}
-  timeOnScreen: 3
+  PointValue: 40
+  ExplosionFx: {fileID: 8328426341284958323, guid: 066dd222b602e49afbe0f2b9c3c96ddb, type: 3}
+  TimeOnScreen: 2
 --- !u!64 &5400576685552452559
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -926,11 +926,11 @@ MonoBehaviour:
   - {fileID: 1996815852551487035, guid: 11bccc60726374a918b5c73120d47ab3, type: 3}
   - {fileID: 3867821073191959212, guid: 591e0b0a9b4dd4709ad61b99dabf57ef, type: 3}
   - {fileID: 5626452297013284046, guid: c5bbabce5ea79419488492993bfdadf0, type: 3}
+  score: 0
   IsGameActive: 0
   spawnRate: 4
-  spaceBetweenSquares: 2.5
-  minValueX: -3.75
-  minValueY: -3.75
+  timeLimit: 60
+  gameStartedTime: 0
 --- !u!4 &1128873052
 Transform:
   m_ObjectHideFlags: 0
@@ -1355,6 +1355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82f487199cba435ead2b04905b1c9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 1128873051}
   difficulty: 2
 --- !u!114 &1390857141
 MonoBehaviour:
@@ -2187,6 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82f487199cba435ead2b04905b1c9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 1128873051}
   difficulty: 3
 --- !u!114 &1910376317
 MonoBehaviour:
@@ -2459,6 +2461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82f487199cba435ead2b04905b1c9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 1128873051}
   difficulty: 1
 --- !u!114 &2064518096
 MonoBehaviour:

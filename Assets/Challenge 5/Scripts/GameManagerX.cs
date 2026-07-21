@@ -19,6 +19,8 @@ public class GameManagerX : MonoBehaviour
     [SerializeField] private int score;
     public bool IsGameActive;
     [SerializeField] private float spawnRate = 4f;
+    [SerializeField] private float timeLimit = 60f;
+    [SerializeField] private float gameStartedTime;
 
     [Header("Positioning")]
     [SerializeField] private static int maxSquareIndex = 4;
@@ -35,6 +37,25 @@ public class GameManagerX : MonoBehaviour
         score = 0;
         UpdateScore(score);
         TitleScreen.SetActive(false);
+        gameStartedTime = Time.time;
+    }
+
+    private void Update()
+    {
+        if (!IsGameActive)
+        {
+            return;
+        }
+
+        float currentTime = Time.time;
+        if (currentTime > gameStartedTime + timeLimit)
+        {
+            GameOver();
+        } 
+        else
+        {
+            TimerText.text = $"Time: {Mathf.Floor(timeLimit - currentTime + gameStartedTime)}";
+        }
     }
 
     // While game is active spawn a random target
@@ -82,6 +103,7 @@ public class GameManagerX : MonoBehaviour
     {
         GameOverText.gameObject.SetActive(true);
         RestartButton.gameObject.SetActive(true);
+        TimerText.text = "Time's up!";
         IsGameActive = false;
     }
 
